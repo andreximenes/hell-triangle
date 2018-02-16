@@ -1,6 +1,7 @@
 package br.com.alx.b2w.validadores;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ public class ValidadorTrianguloTest extends HellTriangleApplicationTests {
 		try {
 			validador.validate(new Triangulo(dado));
 		} catch (TrianguloException e) {
+			fail();
 		}
 	}
 
@@ -35,7 +37,7 @@ public class ValidadorTrianguloTest extends HellTriangleApplicationTests {
 	
 	@Test
 	public void trianguloInvalido() {
-		long[][] dado = { { 4 }, { 5,6,7 }, {8, 9, 2}, { 4, 1, 3,0 } };
+		long[][] dado = { {4}, {5,6,7}, {8, 9, 2}, {4, 1, 3,0} };
 		try {
 			validador.validate(new Triangulo(dado));
 		} catch (TrianguloException e) {

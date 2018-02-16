@@ -6,22 +6,22 @@ public class Triangulo implements Serializable{
 
 	private static final long serialVersionUID = 7966014809034532198L;
 	
-	private long[][] dado;
+	private long[][] dados;
 
 	public Triangulo() {
 		super();
 	}
-	public Triangulo(long[][] dado) {
+	public Triangulo(long[][] dados) {
 		super();
-		this.dado = dado;
+		this.dados = dados;
 	}
 
 
-	public long[][] getDado() {
-		return dado;
+	public long[][] getDados() {
+		return dados;
 	}
-	public void setDado(long[][] dado) {
-		this.dado = dado;
+	public void setDados(long[][] dados) {
+		this.dados = dados;
 	}
 
 	

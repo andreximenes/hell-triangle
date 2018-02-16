@@ -15,11 +15,11 @@ public class ValidadorTriangulo implements Serializable{
 	public static final String ERRO_TRIANGULO_INVALIDO = "Triângulo Inválido";
 
 	public void validate (Triangulo triangulo) throws TrianguloException {
-		if (triangulo == null || triangulo.getDado() == null || triangulo.getDado().length <= 0) {
+		if (triangulo == null || triangulo.getDados() == null || triangulo.getDados().length <= 0) {
             error(ERRO_TRIANGULO_NULO_VAZIO);
         }
         int row = 1;
-        for (long[] rowData : triangulo.getDado()) {
+        for (long[] rowData : triangulo.getDados()) {
             if (rowData.length != row){
                 error(ERRO_TRIANGULO_INVALIDO);
             }
