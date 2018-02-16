@@ -12,14 +12,10 @@ public class TrianguloControllerTest extends HellTriangleApplicationTests {
 	
 	@Autowired
 	private TrianguloController trianguloController;
-	
 	private MockMvc mockMvc;
 	
 	@Before
 	public void setUp() {
 		this.mockMvc = MockMvcBuilders.standaloneSetup(trianguloController).build();
 	}
-	
-	
-
 }
