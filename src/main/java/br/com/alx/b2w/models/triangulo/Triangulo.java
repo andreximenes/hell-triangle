@@ -16,7 +16,6 @@ public class Triangulo implements Serializable{
 		this.dados = dados;
 	}
 
-
 	public long[][] getDados() {
 		return dados;
 	}

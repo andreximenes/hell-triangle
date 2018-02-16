@@ -3,7 +3,8 @@ package br.com.alx.b2w.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.alx.b2w.models.ResponseStatus;
+import br.com.alx.b2w.exceptions.TrianguloException;
+import br.com.alx.b2w.models.EnumStatus;
 import br.com.alx.b2w.models.triangulo.Triangulo;
 import br.com.alx.b2w.models.triangulo.TrianguloResponse;
 import br.com.alx.b2w.validatores.ValidadorTriangulo;
@@ -22,14 +23,14 @@ public class TrianguloService implements MainService <Triangulo, TrianguloRespon
 		TrianguloResponse response = null;
 		try {
 			validador.validate(t);
-			response = new TrianguloResponse(ResponseStatus.SUCESSO, this.calcTriangulo(t.getDados()));
-		} catch (Exception e) {
-			response = new TrianguloResponse(ResponseStatus.ERRO, 0);
+			response = new TrianguloResponse(EnumStatus.SUCESSO.getCodigo(), EnumStatus.SUCESSO.getMsg(), this.calcTriangulo(t.getDados()));
+		} catch (TrianguloException e) {
+			response = new TrianguloResponse(e.getCodigoErro(), e.getMessage(), 0);
 		}
 		return response;
 	}
 
-	public long calcTriangulo (long[][] triangulo) {
+	public long calcTriangulo(long[][] triangulo) {
 		int pos = 0;
 		long resultado = triangulo[0][pos];
 		for(int i = 1 ; i < triangulo.length ; i++){

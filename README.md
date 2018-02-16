@@ -1,7 +1,6 @@
 # hell-triangle
 
-Desafio feito utilizando Springboot 1.5 e Java 1.8. Resolvi fazer o teste em Java por ser a linguagem que possuo mais familiaridade
-e a escolha do springboot foi pelo fato de eu gostar da sua produtividade e agilidade para fazer algumas coisas.
+Desafio feito utilizando Springboot 1.5 e Java 1.8. Resolvi fazer o teste em Java por ser a linguagem que possuo mais familiaridade e já trabalho a um bom tempo. A escolha do springboot se deu pelo fato de eu gostar da sua produtividade e agilidade bem como sua facilidade para executar o artefato final, uma vez que ele já tem o tomcat embarcado.
 
 ### Como executar o projeto?
 Em uma máquina com o java instalado e devidamente configurado no Path do sistema operacional, 
@@ -26,14 +25,24 @@ estará disponível no endereco http://localhost:8080.
   Após isso será retornado o resultado conforme exemplo abaixo:
   #### Exemplo do JSON do Response:
     {
-        "status": "SUCESSO",
-        "resultado": 26
+      "status": 200,
+      "statusMsg": "Total máximo obtido com sucesso.",
+      "resultado": 26
     }
     
-  Caso a estrutura do "triângulo" do request seja inválida, o usuário receberá o seguinte retorno:
+  Caso a estrutura do "triângulo" do request seja inválida, o usuário receberá os seguintes retornos:
   #### Exemplo de JSON do Response retornando um erro:
+  
+  ####### Triângulo nulo ou vazio
     {
-      "status": "ERRO",
+      "status": 500,
+      "statusMsg": "Triângulo nulo ou vazio.",
+      "resultado": 0
+    }
+  ####### Triângulo inválido
+    {
+      "status": 500,
+      "statusMsg": "Trinângulo inválido.",
       "resultado": 0
     }
     
