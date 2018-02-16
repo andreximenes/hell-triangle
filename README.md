@@ -3,9 +3,7 @@
 Desafio feito utilizando Springboot 1.5 e Java 1.8. Resolvi fazer o teste em Java por ser a linguagem que possuo mais familiaridade e já trabalho a um bom tempo. A escolha do springboot se deu pelo fato de eu gostar da sua produtividade e agilidade bem como sua facilidade para executar o artefato final, uma vez que ele já tem o tomcat embarcado.
 
 ### Como executar o projeto?
-Em uma máquina com o java instalado e devidamente configurado no Path do sistema operacional, 
-basta apenas acessar o diretorio dist do projeto e executar o comando java -jar hell-triangle.war, após a subida do projeto, a API
-estará disponível no endereco http://localhost:8080.
+  Em uma máquina com o java instalado e devidamente configurado no Path do sistema operacional, basta apenas acessar o diretório projeto-compilado do projeto e executar o comando java -jar hell-triangle-0.0.1.jar, após a subida do projeto, a API estará disponível no endereco http://localhost:8080.
 
 ### Como realizar o calculo total de um Triangulo usando esta aplicação?
   Com o projeto em execução basta fazer uma requisição HTTP POST para o seguinte endpoit http://localhost:8080/triangulo/calcular.
