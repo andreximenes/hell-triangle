@@ -1,12 +1,16 @@
 package br.com.alx.b2w.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.alx.b2w.models.ResponseStatus;
+import br.com.alx.b2w.models.triangulo.Triangulo;
 import br.com.alx.b2w.models.triangulo.TrianguloResponse;
 import br.com.alx.b2w.services.TrianguloService;
 import br.com.alx.b2w.validatores.ValidadorTriangulo;
@@ -25,8 +29,8 @@ public class TrianguloController {
 	
 	@ResponseBody
 	@PostMapping("/triangulo/calcular")
-	private TrianguloResponse calc() {
-		return new TrianguloResponse(ResponseStatus.SUCESSO, 0);
+	private TrianguloResponse calc(@Valid @RequestBody Triangulo triangulo) {
+		return trianguloService.calcular(triangulo);
 	}
 
 }
