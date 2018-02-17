@@ -40,7 +40,13 @@ Para facilitar os testes, eu disponibilizei o projeto no [Heroku](heroku.com), d
 Para testar usando Heroku, deve-se usar a URL base abaixo:
 > https://hell-triangle-b2w.herokuapp.com
 
+**OBS**: Pode ser que o primeiro acesso demore um pouco, pois o Heroku coloca a aplicação em modo Asleep quando a mesma passa um certo tempo sem uso. Após o primeiro acesso ela fica ativa e tudo fica normal.
+##### Exemplo da aplicação em modo Asleep e ativa no dashboard do Heroku
 
+![enter image description here](https://lh3.googleusercontent.com/BC97uJN7roGqPF7CP0-LSINfIQLz82hVxhe6zRzk2101BrugX9Fq0oygSkNW5NNy_fJOE_votnwNHw)
+
+
+----------
 
 ----------
 
