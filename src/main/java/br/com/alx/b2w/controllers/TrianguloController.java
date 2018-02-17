@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +18,14 @@ public class TrianguloController {
 
 	@Autowired
 	private TrianguloService trianguloService; 
+	
+	private static final String indexText = "<h2>Hell Triangle B2W teste.</h2> Autor: André Luiz Ximenes <br/>"
+			+ "Instruções de Uso: <a href=\"https://github.com/andreximenes/hell-triangle\">Hell Triangle</a>";
+	
+	@RequestMapping("/")
+	private String index() {
+		return indexText;
+	}
 	
 	@ResponseBody
 	@PostMapping("/triangulo/calcular")
