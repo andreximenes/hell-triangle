@@ -24,7 +24,7 @@ Lembrando que para o comando acima funcionar, o Java tem que está configurado n
 Após o projeto iniciar, o usuário deve seguir os passos das **instruções de testes** que está mais abaixo.
     
 
-### 2 - Se for abrir o projeto no Eclipse ou outra IDE
+### 2 - Abrindo o projeto projeto no Eclipse ou outra IDE
 Deve-se importar um projeto Maven existente selecionando o diretório do projeto hell-triangle. Após o Maven baixar todas as dependências do projeto, basta apenas executar a classe principal do projeto:
 `br.com.alx.b2w.HellTriangleApplication`
 
