@@ -116,4 +116,4 @@ Para facilitar os testes, recomendo utilizar alguma ferramenta de testes de API 
 ----------
 
 
-**Autor:** André Luiz XImenes
+**Autor:** André Luiz Ximenes
